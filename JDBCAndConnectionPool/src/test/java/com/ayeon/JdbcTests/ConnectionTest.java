@@ -41,18 +41,16 @@ public class ConnectionTest {
 		
 	}
 	
-	
-	
 	/* 스프링이 제공하는 DataSource를 확장한 DriverManagerDataSource는 6.0.5 API에서 사용가능*/
 	//역시 항상 새로운 커넥션을 획득한다.
 	@Test
 	public void dataSourceDriverManager() throws Exception {
 		
-	 
+	
 		
-		/* DriverManagerDataSource dataSource = new DriverManagerDataSource(URL, ID,PW);
-		 * useDataSource(dataSource);
-		 * */
+//		DriverManagerDataSource dataSource = new DriverManagerDataSource(URL, ID,PW);
+//		 useDataSource(dataSource);
+		
 		
 		
 	}
