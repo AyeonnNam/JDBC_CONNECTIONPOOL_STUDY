@@ -26,9 +26,9 @@ public class dataSourceTest {
 	static final String URL = "jdbc:mysql://localhost:3306/legacyProject?serverTimezone=Asia/Seoul";
 	static final String ID = "root";
 	static final String PW = "mysql";
-//	static final String driver = "com.mysql.cj.jdbc.Driver";
-//	@Setter(onMethod_ = @Autowired )
-//	DataSource dataSource;
+	static final String driver = "com.mysql.cj.jdbc.Driver";
+	@Setter(onMethod_ = @Autowired )
+	DataSource dataSource;
 	
 	private void useDataSource(DataSource source) throws SQLException {
 		
@@ -60,19 +60,19 @@ public class dataSourceTest {
 	
 	
 	
-//	@Test
-//	public void dataSourceConnectionPool() throws SQLException, InterruptedException {
-//		
-//	
-//		
-//		try {
-//			Connection conn =dataSource.getConnection();
-//					log.info("------------------------conn: --------------------- " +conn);
-//					
-//					Thread.sleep(1000);
-//		} catch (Exception e) {
-//			// TODO: handle exception
-//		}		
-//	}
+	@Test
+	public void dataSourceConnectionPool() throws SQLException, InterruptedException {
+		
+	
+		
+		try {
+			Connection conn =dataSource.getConnection();
+					log.info("------------------------conn: --------------------- " +conn);
+					
+					//Thread.sleep(1000);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}		
+	}
 	
 }
