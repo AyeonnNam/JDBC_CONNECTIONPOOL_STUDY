@@ -13,8 +13,9 @@
 			value="jdbc:mysql://localhost:3306/legacyProject?serverTimezone=Asia/Seoul"></property>
 		<property name="username" value="root"></property>
 		<property name="password" value="mysql"></property>
-		<property name="maximumPoolSize" value="10"></property>
-	</bean>
+<!-- 		<property name="maximumPoolSize" value="10"></property>
+ -->	
+ </bean>
 
 	<bean id="dataSource" class="com.zaxxer.hikari.HikariDataSource"
 		destroy-method="close">
