@@ -21,11 +21,11 @@ public class dataSourceConnectionPoolTest {
 	static final String driver = "com.mysql.cj.jdbc.Driver";
 
 	
-	//dataSouce-connectionPool 사용하기 
+	//dataSource-connectionPool 사용하기 
 	private void useDataSource(DataSource dataSource) throws SQLException {
 		
 		Connection conn = dataSource.getConnection();
-		log.info("======= connection = {}, class= {}", conn, conn.getClass());
+		log.info(" connection = {}, class= {}", conn, conn.getClass());
 		
 	}
 	

@@ -46,10 +46,12 @@ public class connectionTest {
 	 * 스프링이 제공하는 DataSource를 확장한 DriverManagerDataSource는 spring-jdbc 라이브러리추가하면 사용가능
 	 */
 	// 역시 항상 새로운 커넥션을 획득한다.
+	// DriverManager()와는 달리 굳이 매번 getConnection()할떄마다 파라미터로 url, username, password를 넘겨주지 않아도 된다.
 	@Test
 	public void dataSourceDriverManager() throws Exception {
 
 		DriverManagerDataSource dataSource = new DriverManagerDataSource(URL, ID, PW);
+		
 		useDataSource(dataSource);
 
 	}

@@ -33,8 +33,8 @@ public class dataSourceTest {
 	
 		
 		try {
-			Connection conn =dataSource.getConnection();
-					log.info("------------------------conn: --------------------- " +conn);
+			Connection conn = dataSource.getConnection();
+					log.info("-- conn: " +conn);
 					
 					//Thread.sleep(1000);
 		} catch (Exception e) {
