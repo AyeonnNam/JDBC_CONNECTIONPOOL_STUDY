@@ -7,8 +7,12 @@ import java.sql.SQLException;
 import javax.sql.DataSource;
 
 import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
+import com.ayeon.myjdbc.MemberDao;
+
+import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
@@ -18,6 +22,9 @@ public class connectionTest {
 	static final String ID = "root";
 	static final String PW = "mysql";
 	static final String driver = "com.mysql.cj.jdbc.Driver";
+	
+	@Setter(onMethod_ = @Autowired)
+	DataSource dataSource;
 
 //	static {
 //		
@@ -63,5 +70,15 @@ public class connectionTest {
 		log.info("connection = {}, class= {}", con2, con2.getClass());
 
 	}
+	
+//	@Test
+//	public void memberdaoTest()throws SQLException {
+//		
+//		MemberDao memberDao = new MemberDao();
+//		memberDao.createTable();
+//		
+//		
+//	}
+//	
 
 }

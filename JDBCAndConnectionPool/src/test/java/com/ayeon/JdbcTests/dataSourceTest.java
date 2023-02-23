@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import com.ayeon.myjdbc.DBConnection;
 
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
@@ -23,8 +24,6 @@ public class dataSourceTest {
 
 	@Setter(onMethod_ = @Autowired )
 	DataSource dataSource;
-	
-	
 	
 	
 	@Test
