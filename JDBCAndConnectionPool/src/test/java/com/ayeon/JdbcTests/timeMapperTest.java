@@ -34,9 +34,7 @@ public class timeMapperTest {
 		try {
 
 			log.info("getTime2");
-			//log.info("timeMapper02 : "+timeMapper.getTime02());
-			log.info("timeMapper02 : " + timeMapper.getTime2());
-				
+			log.info(timeMapper.getTime2());	
 		} catch (Exception e) {
 			log.info(e.getMessage());
 			e.printStackTrace();
