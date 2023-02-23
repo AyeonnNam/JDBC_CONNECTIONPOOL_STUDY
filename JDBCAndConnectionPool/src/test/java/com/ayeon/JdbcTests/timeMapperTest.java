@@ -1,6 +1,5 @@
 package com.ayeon.JdbcTests;
 
-import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.log;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -27,5 +26,21 @@ public class timeMapperTest {
 		
 		log.info("timeMapper : "+timeMapper.getTime());
 		log.info("------------------" +timeMapper.getClass());
+	}
+	
+	@Test
+	public void timeMapperWithXmlTest() {
+		
+		try {
+
+			log.info("getTime2");
+			//log.info("timeMapper02 : "+timeMapper.getTime02());
+			log.info("timeMapper02 : " + timeMapper.getTime2());
+				
+		} catch (Exception e) {
+			log.info(e.getMessage());
+			e.printStackTrace();
+		}
+		
 	}
 }
