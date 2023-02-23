@@ -6,6 +6,8 @@ import java.sql.SQLException;
 
 import javax.sql.DataSource;
 
+import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.SqlSessionFactory;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,8 +25,11 @@ import lombok.extern.slf4j.Slf4j;
 public class dataSourceTest {
 
 	@Setter(onMethod_ = @Autowired )
-	DataSource dataSource;
+	private DataSource dataSource;
 	
+	
+	@Setter(onMethod_ = @Autowired )
+	private SqlSessionFactory sqlSessionFactory;
 	
 	@Test
 	public void dataSourceConnectionPool() throws SQLException, InterruptedException {
@@ -40,5 +45,20 @@ public class dataSourceTest {
 			// TODO: handle exception
 		}		
 	}
+	
+	@Test
+	public void testMyBatis () {
+		
+		SqlSession session = sqlSessionFactory.openSession();
+		Connection conn = session.getConnection();
+		log.info("======Session ======= :" + session);
+		log.info("======conn ========= :" + conn);
+		
+		
+	}
+	
+	
+	
+	
 	
 }
